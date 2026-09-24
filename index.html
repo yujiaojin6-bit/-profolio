@@ -515,6 +515,270 @@
         content: " →";
       }
 
+      .work-intro-wrap {
+        margin-bottom: 28px;
+      }
+
+      .capability-index {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .capability-index span {
+        display: inline-block;
+        padding: 7px 10px;
+        border: 1px solid rgba(23, 21, 23, 0.18);
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--ink);
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .case-study-project {
+        padding: 32px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .case-study-project:first-of-type {
+        border-top: 1px solid var(--line);
+      }
+
+      .project-shell {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .project-header {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .project-number {
+        color: var(--purple);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .project-title-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .project-title-group h3 {
+        font-size: clamp(2.1rem, 3vw, 3.6rem);
+        line-height: 0.96;
+      }
+
+      .project-category {
+        color: var(--purple);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .project-tags span,
+      .method-tag-list span {
+        display: inline-block;
+        padding: 7px 9px;
+        border: 1px solid rgba(23, 21, 23, 0.18);
+        background: rgba(255, 255, 255, 0.18);
+        color: var(--ink);
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .project-main {
+        display: grid;
+        grid-template-columns: minmax(0, 1.14fr) minmax(0, 0.86fr);
+        gap: 28px;
+        align-items: start;
+      }
+
+      .project-copy {
+        min-width: 0;
+      }
+
+      .project-copy h4 {
+        margin: 0 0 10px;
+        font-size: clamp(2.2rem, 3vw, 3.4rem);
+        line-height: 0.98;
+      }
+
+      .project-context {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.65;
+      }
+
+      .project-detail-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .project-detail {
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .mini-label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--purple);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .project-detail p {
+        color: var(--muted);
+        font-size: 0.97rem;
+        line-height: 1.6;
+      }
+
+      .method-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .metric-item {
+        padding: 14px 12px;
+        border: 1px solid var(--line);
+        background: rgba(77, 45, 117, 0.03);
+      }
+
+      .metric-item strong {
+        display: block;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+
+      .metric-item span {
+        display: block;
+        margin-top: 7px;
+        color: var(--muted);
+        font-size: 0.64rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .output-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .output-item {
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 0.96rem;
+      }
+
+      .project-visual-wrap {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .preview-frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 380px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        background: #f5f0ed;
+        box-shadow: var(--shadow);
+      }
+
+      .preview-frame img {
+        display: block;
+        width: 100%;
+        max-height: 420px;
+        object-fit: contain;
+      }
+
+      .confidential-note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.64rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .case-study-project[data-accent="caribou"] .project-number,
+      .case-study-project[data-accent="caribou"] .project-category,
+      .case-study-project[data-accent="caribou"] .mini-label {
+        color: #2f5d5e;
+      }
+
+      .case-study-project[data-accent="alo"] .project-number,
+      .case-study-project[data-accent="alo"] .project-category,
+      .case-study-project[data-accent="alo"] .mini-label {
+        color: #6d5b4d;
+      }
+
+      .case-study-project[data-accent="tiktok"] .project-number,
+      .case-study-project[data-accent="tiktok"] .project-category,
+      .case-study-project[data-accent="tiktok"] .mini-label {
+        color: #3a5d71;
+      }
+
+      .case-study-project[data-accent="yelp"] .project-number,
+      .case-study-project[data-accent="yelp"] .project-category,
+      .case-study-project[data-accent="yelp"] .mini-label {
+        color: #7b4a3a;
+      }
+
+      .case-study-project[data-accent="caribou"] .preview-frame {
+        background: linear-gradient(180deg, #edf3f1, #f5f3f0);
+      }
+
+      .case-study-project[data-accent="alo"] .preview-frame {
+        background: linear-gradient(180deg, #f5f1ed, #eeece9);
+      }
+
+      .case-study-project[data-accent="tiktok"] .preview-frame {
+        background: linear-gradient(180deg, #eef4f7, #f3f3f2);
+      }
+
+      .case-study-project[data-accent="yelp"] .preview-frame {
+        background: linear-gradient(180deg, #f7f0ee, #f5f2ef);
+      }
+
       .featured-case {
         background: #faf7f3;
       }
@@ -713,11 +977,45 @@
 
       .contact .section-label { color: #d9cfe9; }
 
-      .contact-layout {
+      .contact-card {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 280px;
-        gap: 28px;
-        align-items: end;
+        gap: 18px;
+        max-width: 760px;
+        padding: 28px 28px 22px;
+        border: 1px solid rgba(255,255,255,0.28);
+        background: rgba(255,255,255,0.04);
+      }
+
+      .business-card-header,
+      .business-card-meta,
+      .business-card-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        align-items: center;
+      }
+
+      .business-card-label {
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .business-card-label.muted {
+        color: #d9cfe9;
+      }
+
+      .business-card-meta {
+        color: #efe7f7;
+        font-size: 0.96rem;
+        letter-spacing: 0.02em;
+      }
+
+      .business-card-links {
+        padding-top: 8px;
+        border-top: 1px solid rgba(255,255,255,0.2);
       }
 
       .contact h2 {
@@ -768,8 +1066,9 @@
       @media (max-width: 900px) {
         .hero,
         .case-feature-grid,
-        .project-item,
-        .contact-layout {
+        .contact-layout,
+        .project-shell,
+        .project-main {
           grid-template-columns: 1fr;
         }
 
@@ -810,8 +1109,14 @@
         .impact-wrap,
         .tool-grid-compact,
         .process-grid,
-        .case-metric-row {
+        .case-metric-row,
+        .metric-grid {
           grid-template-columns: 1fr;
+        }
+
+        .project-header {
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         section { padding: 72px 0; }
@@ -950,135 +1255,318 @@
 
       <section id="work" class="work" aria-labelledby="work-title">
         <div class="container">
-          <div class="section-heading">
-            <p class="section-label">04 / Selected Work</p>
-            <h2 id="work-title">Selected Work</h2>
+          <div class="work-intro-wrap">
+            <div class="section-heading">
+              <p class="section-label">04 / Selected Work</p>
+              <h2 id="work-title">Work at the intersection of data, strategy, and growth.</h2>
+            </div>
+            <p class="work-intro">
+              A selection of work showing how I turn customer understanding and analytical evidence into strategy, campaigns, and measurable growth decisions.
+            </p>
+            <div class="capability-index" aria-label="Core capabilities overview">
+              <span>Data Analytics</span>
+              <span>Customer Insight</span>
+              <span>Strategy</span>
+              <span>Growth</span>
+              <span>Campaigns</span>
+            </div>
           </div>
-          <p class="work-intro">
-            Work spanning loyalty growth, customer insight, content performance, and strategic marketing analysis.
-          </p>
 
-          <div class="project-grid">
-            <article class="project-item">
-              <a class="project-visual" href="case-study-caribou.html" aria-label="Open Caribou Coffee case study">
-                <img src="covers/Caribou%20Loyalty%20Growth%20Strategy.pdf.png" alt="Caribou Coffee project preview" />
-              </a>
+          <article class="case-study-project" data-accent="caribou">
+            <div class="project-shell">
               <div class="project-copy">
-                <span class="project-number">01 / 04</span>
-                <h3>Caribou Coffee</h3>
-                <p class="project-type">Loyalty Growth Strategy</p>
-                <p class="project-question">How can Caribou increase visit frequency among Casual Loyalists?</p>
-                <div class="project-meta">
-                  <div>
-                    <strong>Business question</strong>
-                    <p>Which customer behaviors and digital adoption patterns create repeat purchase behavior?</p>
-                  </div>
-                  <div>
-                    <strong>Methodology</strong>
-                    <p>Customer data analysis, behavioral segmentation, propensity-score matching, and difference-in-differences.</p>
+                <div class="project-header">
+                  <span class="project-number">01</span>
+                  <div class="project-title-group">
+                    <h3>Caribou Coffee</h3>
+                    <span class="project-category">Loyalty Analytics &amp; Growth Strategy</span>
                   </div>
                 </div>
-                <div class="tag-list">
-                  <span>Customer Insights</span>
+                <div class="project-tags">
                   <span>Data Analytics</span>
+                  <span>Customer Insight</span>
                   <span>Growth Strategy</span>
                   <span>CRM</span>
+                  <span>Campaigns</span>
                 </div>
-                <a class="story-link" href="case-study-caribou.html">View Case Study</a>
-              </div>
-            </article>
+                <h4>How can Caribou increase visit frequency among Casual Loyalists?</h4>
+                <p class="project-context">
+                  A client consulting project based on a loyalty database of more than two million members, focused on identifying the behaviors and marketing opportunities that could increase customer visit frequency.
+                </p>
 
-            <article class="project-item">
-              <a class="project-visual" href="case-study-alo.html" aria-label="Open ALO Yoga case study">
-                <img src="covers/Alo%20Brand%20Audit.pdf.png" alt="Alo Yoga project preview" />
-              </a>
-              <div class="project-copy">
-                <span class="project-number">02 / 04</span>
-                <h3>ALO Yoga</h3>
-                <p class="project-type">Brand Strategy &amp; Consumer Research</p>
-                <p class="project-question">Where does the brand promise meet the consumer reality?</p>
-                <div class="project-meta">
-                  <div>
-                    <strong>Business question</strong>
-                    <p>How can the brand sharpen positioning and align it with customer expectations and category dynamics?</p>
+                <div class="project-detail-stack">
+                  <div class="project-detail">
+                    <span class="mini-label">Business Question</span>
+                    <p>How could Caribou identify the behaviors most likely to increase loyalty engagement and generate two additional visits per Casual Loyalist each year?</p>
                   </div>
-                  <div>
-                    <strong>Methodology</strong>
-                    <p>Consumer research, segmentation, and brand perception analysis.</p>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Methodology &amp; Tools</span>
+                    <div class="method-tag-list">
+                      <span>2M+ Member Database</span>
+                      <span>SQL</span>
+                      <span>R</span>
+                      <span>Descriptive Analytics</span>
+                      <span>Propensity Score Matching</span>
+                      <span>Difference-in-Differences</span>
+                      <span>Secondary Research</span>
+                      <span>Survey Research</span>
+                    </div>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">My Impact</span>
+                    <p>I led the overall data analysis and the App &amp; Order Ahead workstream, uncovering behavioral patterns and testing whether digital ordering adoption contributed to higher visit frequency. I then helped translate the combined findings into three strategic growth themes and six execution-ready campaign action plans.</p>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Verified Evidence</span>
+                    <div class="metric-grid">
+                      <div class="metric-item">
+                        <strong>2M+</strong>
+                        <span>members analyzed</span>
+                      </div>
+                      <div class="metric-item">
+                        <strong>+2</strong>
+                        <span>target visits per customer</span>
+                      </div>
+                      <div class="metric-item">
+                        <strong>3</strong>
+                        <span>strategic themes</span>
+                      </div>
+                      <div class="metric-item">
+                        <strong>6</strong>
+                        <span>campaign plans</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="tag-list">
-                  <span>Consumer Research</span>
+
+                <a class="story-link" href="case-study-caribou.html">View Full Case Study</a>
+              </div>
+
+              <div class="project-visual-wrap">
+                <div class="preview-frame">
+                  <img src="covers/Caribou%20Loyalty%20Growth%20Strategy.pdf.png" alt="Caribou Coffee work sample preview" />
+                </div>
+                <p class="confidential-note">Selected content only. Certain data and materials have been omitted for confidentiality.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study-project" data-accent="alo">
+            <div class="project-shell">
+              <div class="project-copy">
+                <div class="project-header">
+                  <span class="project-number">02</span>
+                  <div class="project-title-group">
+                    <h3>ALO Yoga</h3>
+                    <span class="project-category">Brand Strategy &amp; Consumer Research</span>
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span>Customer Insight</span>
                   <span>Brand Strategy</span>
-                  <span>Insights</span>
+                  <span>Competitive Analysis</span>
+                  <span>Growth</span>
+                  <span>Influencer Marketing</span>
                 </div>
-                <a class="story-link" href="case-study-alo.html">View Case Study</a>
-              </div>
-            </article>
+                <h4>Where does the intended brand promise diverge from consumer perception?</h4>
+                <p class="project-context">
+                  A brand strategy project using primary consumer research and competitive analysis to understand audience perceptions and identify gaps in Alo’s market positioning.
+                </p>
 
-            <article class="project-item">
-              <a class="project-visual" href="case-study-tiktok.html" aria-label="Open TikTok case study">
-                <img src="covers/TikTok%20Engagement%20%26%20Reach%20Prediction.pdf.pdf.png" alt="TikTok project preview" />
-              </a>
-              <div class="project-copy">
-                <span class="project-number">03 / 04</span>
-                <h3>TikTok</h3>
-                <p class="project-type">Machine Learning &amp; Reach Prediction</p>
-                <p class="project-question">Which creator and content signals predict reach?</p>
-                <div class="project-meta">
-                  <div>
-                    <strong>Business question</strong>
-                    <p>What content and creator characteristics are associated with stronger organic reach and engagement?</p>
+                <div class="project-detail-stack">
+                  <div class="project-detail">
+                    <span class="mini-label">Business Question</span>
+                    <p>How can Alo develop a clearer and more differentiated position by understanding the gap between its intended identity and actual consumer perception?</p>
                   </div>
-                  <div>
-                    <strong>Methodology</strong>
-                    <p>Predictive modeling and performance analytics using creator and content-level variables.</p>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Methodology &amp; Tools</span>
+                    <div class="method-tag-list">
+                      <span>Primary Research</span>
+                      <span>Consumer Survey</span>
+                      <span>Audience Analysis</span>
+                      <span>Competitive Analysis</span>
+                      <span>Brand Perception</span>
+                      <span>Positioning</span>
+                    </div>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">My Impact</span>
+                    <p>I identified key differences between Alo’s intended positioning and how consumers actually perceived the brand. I translated those insights into recommendations across brand positioning, audience strategy, and influencer marketing.</p>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Strategic Outputs</span>
+                    <div class="output-list">
+                      <div class="output-item">Brand Positioning</div>
+                      <div class="output-item">Audience Strategy</div>
+                      <div class="output-item">Influencer Strategy</div>
+                    </div>
                   </div>
                 </div>
-                <div class="tag-list">
-                  <span>Machine Learning</span>
+
+                <a class="story-link" href="case-study-alo.html">View Full Case Study</a>
+              </div>
+
+              <div class="project-visual-wrap">
+                <div class="preview-frame">
+                  <img src="covers/Alo%20Brand%20Audit.pdf.png" alt="ALO Yoga work sample preview" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study-project" data-accent="tiktok">
+            <div class="project-shell">
+              <div class="project-copy">
+                <div class="project-header">
+                  <span class="project-number">03</span>
+                  <div class="project-title-group">
+                    <h3>TikTok</h3>
+                    <span class="project-category">Machine Learning &amp; Reach Prediction</span>
+                  </div>
+                </div>
+                <div class="project-tags">
                   <span>Data Analytics</span>
+                  <span>Machine Learning</span>
+                  <span>Content Strategy</span>
                   <span>Predictive Modeling</span>
                 </div>
-                <a class="story-link" href="case-study-tiktok.html">View Case Study</a>
-              </div>
-            </article>
+                <h4>Which creator and content signals predict video reach?</h4>
+                <p class="project-context">
+                  A machine-learning project analyzing more than 12,000 TikTok videos to understand engagement drivers and estimate potential video reach.
+                </p>
 
-            <article class="project-item">
-              <a class="project-visual" href="case-study-yelp.html" aria-label="Open Yelp case study">
-                <img src="covers/Yelp%20Analysis.pdf.png" alt="Yelp project preview" />
-              </a>
-              <div class="project-copy">
-                <span class="project-number">04 / 04</span>
-                <h3>Yelp</h3>
-                <p class="project-type">Restaurant Performance Analytics</p>
-                <p class="project-question">What makes a restaurant visible, credible, and built to last?</p>
-                <div class="project-meta">
-                  <div>
-                    <strong>Business question</strong>
-                    <p>Which factors most strongly drive restaurant ratings, survival, and long-term customer trust?</p>
+                <div class="project-detail-stack">
+                  <div class="project-detail">
+                    <span class="mini-label">Business Question</span>
+                    <p>Which creator characteristics and content attributes have the strongest relationship with engagement, and how can they be used to predict a video’s potential reach?</p>
                   </div>
-                  <div>
-                    <strong>Methodology</strong>
-                    <p>Regression modeling, odds-ratio interpretation, and selection among competing predictive approaches.</p>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Methodology &amp; Tools</span>
+                    <div class="method-tag-list">
+                      <span>12K+ Videos</span>
+                      <span>Python</span>
+                      <span>OLS</span>
+                      <span>Ridge</span>
+                      <span>Lasso</span>
+                      <span>Random Forest</span>
+                      <span>Feature Importance</span>
+                      <span>Predictive Modeling</span>
+                    </div>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">My Impact</span>
+                    <p>I analyzed more than 12,000 TikTok videos, compared multiple modeling approaches, and identified the creator and content characteristics most strongly associated with performance. I then developed a Random Forest model to estimate potential video reach.</p>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Evidence &amp; Outputs</span>
+                    <div class="metric-grid">
+                      <div class="metric-item">
+                        <strong>12K+</strong>
+                        <span>videos analyzed</span>
+                      </div>
+                      <div class="metric-item">
+                        <strong>4</strong>
+                        <span>modeling approaches</span>
+                      </div>
+                      <div class="metric-item">
+                        <strong>1</strong>
+                        <span>reach-prediction model</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="tag-list">
-                  <span>Analytics</span>
-                  <span>Modeling</span>
-                  <span>Customer Insight</span>
-                </div>
-                <a class="story-link" href="case-study-yelp.html">View Case Study</a>
+
+                <a class="story-link" href="case-study-tiktok.html">View Full Case Study</a>
               </div>
-            </article>
-          </div>
+
+              <div class="project-visual-wrap">
+                <div class="preview-frame">
+                  <img src="covers/TikTok%20Engagement%20%26%20Reach%20Prediction.pdf.pdf.png" alt="TikTok work sample preview" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-study-project" data-accent="yelp">
+            <div class="project-shell">
+              <div class="project-copy">
+                <div class="project-header">
+                  <span class="project-number">04</span>
+                  <div class="project-title-group">
+                    <h3>Yelp</h3>
+                    <span class="project-category">Restaurant Performance Analytics</span>
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span>Data Analytics</span>
+                  <span>Customer Insight</span>
+                  <span>Regression</span>
+                  <span>Predictive Modeling</span>
+                  <span>Business Strategy</span>
+                </div>
+                <h4>What makes a restaurant visible, credible, and built to last?</h4>
+                <p class="project-context">
+                  An analytical project examining the factors associated with restaurant ratings, customer trust, and long-term survival.
+                </p>
+
+                <div class="project-detail-stack">
+                  <div class="project-detail">
+                    <span class="mini-label">Business Question</span>
+                    <p>Which restaurant and customer-experience factors are most strongly associated with ratings, market survival, and long-term credibility?</p>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Methodology &amp; Tools</span>
+                    <div class="method-tag-list">
+                      <span>Regression</span>
+                      <span>Odds Ratios</span>
+                      <span>Model Comparison</span>
+                      <span>Predictive Analysis</span>
+                      <span>Restaurant Data</span>
+                    </div>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">My Impact</span>
+                    <p>I analyzed restaurant-level patterns, compared competing modeling approaches, and translated the findings into business-relevant interpretations around performance drivers, customer credibility, and survival-related factors.</p>
+                  </div>
+
+                  <div class="project-detail">
+                    <span class="mini-label">Analytical Outputs</span>
+                    <div class="output-list">
+                      <div class="output-item">Performance Drivers</div>
+                      <div class="output-item">Survival Factors</div>
+                      <div class="output-item">Business Recommendations</div>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="story-link" href="case-study-yelp.html">View Full Case Study</a>
+              </div>
+
+              <div class="project-visual-wrap">
+                <div class="preview-frame">
+                  <img src="covers/Yelp%20Analysis.pdf.png" alt="Yelp work sample preview" />
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
       <section id="how-i-think" class="how-i-think" aria-labelledby="how-heading">
         <div class="container">
           <div class="section-heading">
-            <p class="section-label">06 / How I Think</p>
+            <p class="section-label">05 / How I Think</p>
             <h2 id="how-heading">How I approach a problem.</h2>
           </div>
 
@@ -1113,7 +1601,7 @@
       <section id="toolkit" class="toolkit" aria-labelledby="toolkit-title">
         <div class="container">
           <div class="section-heading">
-            <p class="section-label">07 / Toolkit</p>
+            <p class="section-label">06 / Toolkit</p>
             <h2 id="toolkit-title">Tools and methods used to turn evidence into action.</h2>
           </div>
 
@@ -1155,19 +1643,26 @@
       </section>
 
       <section id="contact" class="contact" aria-labelledby="contact-title">
-        <div class="container contact-layout">
-          <div>
-            <p class="section-label">08 / Contact</p>
-            <h2 id="contact-title">Let’s turn insight into the next growth decision.</h2>
-            <a class="resume-cta" href="yujiao-jin-resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">07 / Contact</p>
+            <h2 id="contact-title">Let’s stay in touch.</h2>
           </div>
 
-          <div class="contact-details">
-            <p>Yujiao Jin<br />Chicago, IL</p>
-            <p>
-              <a class="contact-link" href="mailto:yujiaojin2026@u.northwestern.edu">yujiaojin2026@u.northwestern.edu</a><br />
+          <div class="contact-card">
+            <div class="business-card-header">
+              <span class="business-card-label">Yujiao (Sky) Jin</span>
+              <span class="business-card-label muted">Data-Driven Marketing Strategist</span>
+            </div>
+            <div class="business-card-meta">
+              <span>Business Strategy · Customer Analytics · Growth Marketing</span>
+              <span>Chicago, IL</span>
+            </div>
+            <div class="business-card-links">
+              <a class="contact-link" href="mailto:yujiaojin2026@u.northwestern.edu">yujiaojin2026@u.northwestern.edu</a>
               <a class="contact-link" href="https://www.linkedin.com/in/yujiao-sky-jin-bab419233" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </p>
+              <a class="contact-link" href="yujiao-jin-resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </div>
           </div>
         </div>
       </section>
