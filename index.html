@@ -139,6 +139,46 @@
         font-weight: 600;
       }
 
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .primary-link,
+      .secondary-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid var(--line);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .primary-link {
+        background: var(--purple);
+        border-color: var(--purple);
+        color: #fff;
+      }
+
+      .secondary-link {
+        background: rgba(255,255,255,0.24);
+        color: var(--ink);
+      }
+
+      .primary-link:hover,
+      .secondary-link:hover,
+      .primary-link:focus-visible,
+      .secondary-link:focus-visible {
+        transform: translateY(-1px);
+      }
+
       .hero-meta {
         display: flex;
         flex-wrap: wrap;
@@ -801,8 +841,12 @@
           <p class="eyebrow">Business Strategy · Customer Analytics · Growth Marketing</p>
           <h1 id="hero-title">Yujiao <span class="hero-title-accent">(Sky)</span> Jin</h1>
           <p class="hero-description">
-            I turn customer and campaign data into insights, strategies, and execution-ready growth ideas.
+            I connect customer insight, data evidence, and marketing execution to turn complex business questions into clear growth decisions.
           </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#work">View Work</a>
+            <a class="secondary-link" href="yujiao-jin-resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
           <div class="hero-meta">
             <span>Northwestern University</span>
             <span>M.S. Integrated Marketing Communications — Data Track</span>
@@ -822,7 +866,7 @@
         <div class="container">
           <div class="section-heading">
             <p class="section-label">02 / Impact</p>
-            <h2>Work measured in outcomes.</h2>
+            <h2>Business outcomes, not just activity.</h2>
           </div>
           <div class="impact-wrap">
             <div class="impact-item">
@@ -911,7 +955,7 @@
             <h2 id="work-title">Selected Work</h2>
           </div>
           <p class="work-intro">
-            A selection of work across customer analytics, consumer insight, business strategy, and growth marketing.
+            Selected work across loyalty growth, consumer understanding, creator analytics, and restaurant performance strategy.
           </p>
 
           <div class="project-grid">
