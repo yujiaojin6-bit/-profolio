@@ -1,345 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beibei Jin | Customer Analytics Portfolio</title>
-    <meta
-      name="description"
-      content="Customer analytics and growth strategy portfolio for Beibei Jin."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <nav class="nav container" aria-label="Main navigation">
-          <a class="brand" href="#top">Beibei Jin</a>
-          <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#impact">Impact</a>
-            <a href="#capabilities">Capabilities</a>
-            <a href="#work">Selected Work</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#toolkit">Toolkit</a>
-            <a href="#how-i-think">How I Think</a>
-            <a href="resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a>
-            <a href="#contact" class="nav-cta">Contact</a>
-          </div>
-        </nav>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Yujiao (Sky) Jin, a data-driven marketer and business-oriented analyst.">
+  <title>Yujiao (Sky) Jin | Marketing Analytics & Growth</title>
+  <style>
+    :root {
+      --ink: #171719;
+      --muted: #67676b;
+      --line: #d9d9dc;
+      --paper: #fbfbfa;
+      --soft: #f0efed;
+      --purple: #4e2a84;
+      --purple-soft: #eee9f5;
+      --lavender-wash: #f5f1f8;
+      --max: 1180px;
+    }
 
-      <main id="top">
-        <section class="hero container">
-          <div class="hero-copy">
-            <p class="eyebrow">Customer analytics · growth strategy · marketing science</p>
-            <h1>Turning customer data into growth decisions.</h1>
-            <p class="lede">
-              I translate customer, loyalty, and market signals into sharper strategy,
-              more efficient targeting, and measurable business impact.
-            </p>
-            <div class="cta-row">
-              <a href="#work" class="button primary">View selected work</a>
-              <a href="#contact" class="button secondary">Contact</a>
-            </div>
-            <ul class="hero-meta" aria-label="Key outcomes">
-              <li>2M+ loyalty members analyzed</li>
-              <li>25% incremental visit lift</li>
-              <li>10% conversion lift</li>
-            </ul>
-          </div>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .container { width: min(100% - 48px, var(--max)); margin: 0 auto; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+    }
+    .wordmark {
+      color: var(--purple);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 180ms ease;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--purple); }
 
-          <div class="hero-panel" aria-label="Portfolio snapshot">
-            <div class="panel-header">
-              <span class="status-dot"></span>
-              <span>Key signal</span>
-            </div>
-            <div class="mini-stat-block">
-              <span class="mini-kicker">Retention opportunity</span>
-              <strong>+18.4%</strong>
-              <small>Higher value from high-frequency members</small>
-            </div>
-            <div class="mini-grid">
-              <div>
-                <span>Incremental visits</span>
-                <strong>+25%</strong>
-              </div>
-              <div>
-                <span>Conversion</span>
-                <strong>+10%</strong>
-              </div>
-            </div>
-            <div class="chart-bars" aria-hidden="true">
-              <span style="height: 34%"></span>
-              <span style="height: 52%"></span>
-              <span style="height: 66%"></span>
-              <span style="height: 58%"></span>
-              <span style="height: 82%"></span>
-              <span style="height: 100%"></span>
-            </div>
-          </div>
-        </section>
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 80px;
+      align-items: center;
+      min-height: 620px;
+      padding: 92px 0 108px;
+    }
+    .eyebrow, .section-label {
+      margin: 0 0 20px;
+      color: var(--purple);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: -.035em;
+    }
+    h1 {
+      max-width: 800px;
+      font-size: clamp(3.8rem, 8vw, 7.5rem);
+      line-height: .94;
+    }
+    .hero-title-accent { color: var(--purple); }
+    .hero-description {
+      max-width: 590px;
+      margin: 36px 0 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+    .hero-aside { align-self: end; }
+    .headshot-frame {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1.15;
+      background: var(--purple-soft);
+    }
+    .headshot-frame::after {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-right: 1px solid var(--purple);
+      border-bottom: 1px solid var(--purple);
+      content: "";
+    }
+    .headshot {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .location {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: .83rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .location span { display: block; }
+    .location span + span { margin-top: 5px; }
 
-        <section id="about" class="section container">
-          <div class="section-header">
-            <p class="kicker">About</p>
-            <h2>Analytic partner for customer growth.</h2>
-          </div>
-          <div class="about-grid">
-            <div>
-              <p>
-                I work at the intersection of customer analytics, growth strategy, and marketing execution.
-                My focus is helping teams find the real customer signal, turn it into a concrete plan,
-                and communicate the recommendation clearly enough to move an organization.
-              </p>
-              <p>
-                I have led work across loyalty data, segmentation, pricing and offer strategy,
-                customer research, and campaign design for consumer brands with large, behavior-heavy customer bases.
-              </p>
-            </div>
-            <aside class="quote-card">
-              <p>
-                “The strongest analytics work is not just accurate — it is actionable,
-                persuasive, and tied directly to the growth decision.”
-              </p>
-            </aside>
-          </div>
-        </section>
+    section { padding: 100px 0; border-top: 1px solid var(--line); }
+    #about { background: #fff; }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .section-heading h2 { max-width: 760px; font-size: clamp(2.4rem, 5vw, 4.7rem); line-height: 1.02; }
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 100px;
+    }
+    .about-copy {
+      max-width: 750px;
+      margin: 0;
+      color: #35353a;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      line-height: 1.55;
+    }
+    .about-note { padding-top: 15px; border-top: 1px solid var(--ink); color: var(--muted); font-size: .9rem; }
+    .about-note strong { display: block; margin-bottom: 12px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.3rem; font-weight: 400; }
 
-        <section id="impact" class="proof-strip">
-          <div class="container proof-grid">
-            <div class="proof-item">
-              <strong>2M+</strong>
-              <span>loyalty members analyzed</span>
-            </div>
-            <div class="proof-item">
-              <strong>+25%</strong>
-              <span>incremental monthly visits</span>
-            </div>
-            <div class="proof-item">
-              <strong>+10%</strong>
-              <span>conversion lift</span>
-            </div>
-            <div class="proof-item">
-              <strong>C-suite</strong>
-              <span>presentation experience</span>
-            </div>
-          </div>
-        </section>
+    .impact-strip { padding: 0 0 20px; border-top: 1px solid var(--line); }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      padding: 24px 0 0;
+    }
+    .impact-item {
+      padding: 22px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.6);
+      text-align: center;
+    }
+    .impact-item strong {
+      display: block;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+    .impact-item span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.5;
+    }
 
-        <section id="capabilities" class="section container">
-          <div class="section-header">
-            <p class="kicker">Capabilities</p>
-            <h2>From customer insight to strategic action.</h2>
-          </div>
-          <div class="capability-grid">
-            <article class="info-card">
-              <span class="card-index">01</span>
-              <h3>Customer segmentation</h3>
-              <p>Identify meaningful segments, value drivers, and high-potential customer cohorts.</p>
-            </article>
-            <article class="info-card">
-              <span class="card-index">02</span>
-              <h3>Experimentation</h3>
-              <p>Design tests and interpret signaled lift with clear business implications.</p>
-            </article>
-            <article class="info-card">
-              <span class="card-index">03</span>
-              <h3>Growth strategy</h3>
-              <p>Translate insight into offers, targeting, and campaign concepts that move KPIs.</p>
-            </article>
-            <article class="info-card">
-              <span class="card-index">04</span>
-              <h3>Executive communication</h3>
-              <p>Build the story executives need: evidence, narrative, and clear recommendation.</p>
-            </article>
-          </div>
-        </section>
+    .work { background: var(--soft); }
+    .work .section-heading { display: block; max-width: 820px; margin-bottom: 48px; }
+    .work .section-heading h2 { max-width: none; font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: .98; }
+    .work-intro { max-width: 620px; margin: 16px 0 0; color: var(--muted); font-size: 1rem; }
+    .project-list { border-top: 1px solid var(--ink); }
+    .project-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; padding: 70px 0; border-bottom: 1px solid var(--line); }
+    .project-card:nth-child(even) .project-visual { order: 2; }
+    .project-card:nth-child(even) .project-copy { order: 1; }
+    .project-visual { position: relative; min-height: 410px; overflow: hidden; background: #e2ddd5; }
+    .project-visual::before { position: absolute; inset: 22px; border: 1px solid rgba(23, 23, 25, .28); content: ""; }
+    .project-cover { display: block; width: 100%; height: 100%; min-height: 410px; background: var(--paper); object-fit: contain; object-position: center; transition: transform 300ms ease; }
+    .project-visual:hover .project-cover { transform: scale(1.025); }
+    .visual-caption { position: absolute; right: 25px; bottom: 22px; color: rgba(23, 23, 25, .62); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+    .visual-caribou { background: #dce3db; }
+    .visual-caribou::after { position: absolute; top: 50%; left: 14%; width: 72%; height: 1px; background: var(--ink); box-shadow: 0 -76px 0 rgba(23, 23, 25, .22), 0 76px 0 rgba(23, 23, 25, .22); content: ""; }
+    .loyalty-ring { position: absolute; top: 50%; left: 50%; width: 205px; height: 205px; border: 28px solid var(--purple); border-right-color: #aebbaa; border-radius: 50%; transform: translate(-50%, -50%) rotate(-35deg); }
+    .loyalty-ring span { position: absolute; top: 50%; left: 50%; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.8rem; transform: translate(-50%, -50%); }
+    .visual-alo { background: #eadfd8; }
+    .visual-alo::after { position: absolute; right: 15%; bottom: 15%; width: 52%; height: 52%; border: 1px solid var(--ink); content: ""; }
+    .alo-word { position: absolute; top: 26%; left: 12%; color: var(--purple); font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.5rem, 8vw, 6.5rem); line-height: .8; letter-spacing: -.08em; }
+    .alo-axis { position: absolute; right: 12%; bottom: 20%; left: 12%; border-top: 1px solid var(--ink); }
+    .alo-axis::before, .alo-axis::after { position: absolute; top: -4px; width: 7px; height: 7px; background: var(--purple); border-radius: 50%; content: ""; }
+    .alo-axis::before { left: 22%; }
+    .alo-axis::after { right: 18%; }
+    .visual-tiktok { background: #d9e0ea; }
+    .model-bars { position: absolute; right: 15%; bottom: 22%; left: 15%; display: flex; align-items: end; gap: 12px; height: 53%; border-bottom: 1px solid var(--ink); }
+    .model-bars span { flex: 1; background: var(--purple); }
+    .model-bars span:nth-child(1) { height: 34%; }
+    .model-bars span:nth-child(2) { height: 51%; background: #7788a2; }
+    .model-bars span:nth-child(3) { height: 70%; }
+    .model-bars span:nth-child(4) { height: 88%; background: #7788a2; }
+    .model-bars span:nth-child(5) { height: 64%; }
+    .reach-line { position: absolute; top: 28%; right: 14%; left: 14%; height: 35%; border-top: 2px solid var(--ink); transform: skewY(-15deg); }
+    .visual-yelp { background: #e7ddd0; }
+    .map-grid { position: absolute; inset: 20% 14%; background: repeating-linear-gradient(0deg, transparent 0 34px, rgba(23, 23, 25, .25) 35px), repeating-linear-gradient(90deg, transparent 0 42px, rgba(23, 23, 25, .25) 43px); transform: rotate(-8deg); }
+    .map-pin { position: absolute; width: 17px; height: 17px; background: var(--purple); border: 4px solid #e7ddd0; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+    .map-pin.one { top: 35%; left: 30%; }
+    .map-pin.two { top: 52%; left: 62%; background: var(--ink); }
+    .map-pin.three { top: 68%; left: 45%; }
+    .project-copy { min-width: 0; }
+    .project-number { color: var(--purple); font-size: .78rem; letter-spacing: .1em; }
+    .project-card h3 { margin-top: 20px; font-size: clamp(2.2rem, 4vw, 4rem); line-height: .95; }
+    .project-type { margin: 14px 0 0; color: var(--purple); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .project-question { margin: 32px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; line-height: 1.2; }
+    .project-details { display: grid; gap: 16px; margin: 28px 0 0; }
+    .project-detail { margin: 0; color: var(--muted); font-size: .9rem; }
+    .project-detail strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+    .project-link { display: inline-block; margin-top: 28px; padding-bottom: 3px; border-bottom: 1px solid var(--purple); color: var(--purple); font-size: .82rem; font-weight: 700; text-decoration: none; }
+    .project-link::after { content: "  ↗"; }
 
-        <section id="work" class="section container">
-          <div class="section-header">
-            <p class="kicker">Selected Work</p>
-            <h2>Representative projects and strategic analysis.</h2>
-          </div>
+    .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+    .experience-list { border-top: 1px solid var(--ink); }
+    .experience-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .experience-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .8rem; }
+    .experience-item h3 { margin: 8px 0 4px; font-size: 1.45rem; }
+    .experience-role { margin: 0; color: var(--purple); font-size: .86rem; }
+    .experience-item p { margin: 12px 0 0; color: var(--muted); font-size: .9rem; }
+    .education { padding-top: 15px; border-top: 1px solid var(--ink); }
+    .education-entry { padding: 0 0 28px; border-bottom: 1px solid var(--line); }
+    .education-entry + .education-entry { padding-top: 28px; }
+    .education-entry h3 { font-size: 1.45rem; }
+    .education-entry p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+    .skill-block { margin-top: 28px; }
+    .skill-block h3 { margin-bottom: 10px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .77rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .skill-block p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .artifacts { background: #fff; }
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .artifact-card {
+      min-height: 220px;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .artifact-card span {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .artifact-visual {
+      position: relative;
+      height: 138px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f4f0ee, #efeae6);
+      overflow: hidden;
+    }
+    .artifact-visual::before {
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(23, 23, 25, .15);
+      content: "";
+    }
+    .artifact-visual::after {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      height: 50%;
+      background: linear-gradient(90deg, rgba(78,42,132,0.20), rgba(78,42,132,0.04));
+      clip-path: polygon(0 82%, 16% 68%, 30% 72%, 48% 36%, 62% 58%, 80% 24%, 100% 32%, 100% 100%, 0 100%);
+      content: "";
+    }
 
-          <div class="project-grid">
-            <article class="project-card featured">
-              <div class="project-tag">Flagship case</div>
-              <h3>Caribou Coffee</h3>
-              <p>
-                Built a data-driven customer retention strategy using loyalty, channel, and offer performance data to identify the highest-value member segment and improve monthly visit behavior.
-              </p>
-              <ul>
-                <li>2M+ loyalty members analyzed</li>
-                <li>PSM + DID framework</li>
-                <li>25% incremental monthly visit lift</li>
-              </ul>
-              <a href="case-study-caribou.html">Read the case study →</a>
-            </article>
+    .approach { background: #f7f4f1; }
+    .approach .section-heading {
+      margin-bottom: 36px;
+    }
+    .approach-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .approach-step {
+      padding: 26px 18px 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.52);
+    }
+    .approach-step .step-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: white;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+    .approach-step h3 {
+      margin: 16px 0 8px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .approach-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.5;
+    }
 
-            <article class="project-card">
-              <div class="project-tag">Consumer brand</div>
-              <h3>Alo</h3>
-              <p>
-                Mapped customer behavior and demand signals to identify the best route for acquisition and retention across lifestyle and category expansion.
-              </p>
-              <a href="case-study-alo.html">Read the case study →</a>
-            </article>
+    .toolkit { background: var(--purple); color: white; }
+    .toolkit .section-label { color: #d8cbed; }
+    .toolkit .section-heading { margin-bottom: 30px; }
+    .toolkit .section-heading h2 { max-width: 860px; color: white; }
+    .habit-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 60px; border-top: 1px solid var(--ink); }
+    .habit-item { padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .habit-item span { color: var(--purple); font-size: .76rem; font-weight: 700; letter-spacing: .12em; }
+    .habit-item h3 { margin: 12px 0 8px; font-size: 1.7rem; }
+    .habit-item p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .capabilities { background: #fbf8f2; color: var(--ink); }
+    .capabilities .section-label { color: var(--purple); }
+    .capabilities .section-heading h2 { color: #191719; }
+    .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .capability-card { min-height: 360px; padding: 40px 34px 44px; }
+    .capability-card:nth-child(1) { background: #f1ecf6; color: #191719; }
+    .capability-card:nth-child(2) { background: #d8c7e8; color: #191719; }
+    .capability-card:nth-child(3) { background: #4e2a84; color: #f8f5f0; }
+    .capability-index { display: block; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .15em; }
+    .capability-card h3 { margin: 68px 0 14px; font-size: clamp(1.8rem, 2.6vw, 2.5rem); line-height: 1.03; }
+    .capability-card p { margin: 0 0 28px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .93rem; font-weight: 600; }
+    .capability-card ul { display: grid; gap: 8px; margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .88rem; list-style: none; }
+    .capability-card li { line-height: 1.4; }
+    .capability-card:nth-child(3) .capability-index, .capability-card:nth-child(3) p { color: #d8cbed; }
+    .toolkit-intro { max-width: 760px; margin: 0 0 62px; color: #e7e0f1; font-size: 1.05rem; }
+    .tool-grid { border-top: 1px solid #806aa5; }
+    .tool-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 64px; padding: 38px 0 42px; }
+    .tool-row + .tool-row { border-top: 1px solid #806aa5; }
+    .tool-row h3 { margin: 0; color: #d8cbed; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .76rem; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
+    .tool-content ul { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; padding: 0; list-style: none; }
+    .tool-content li { color: #fff; font-size: 1.2rem; line-height: 1.35; }
+    .tool-content li.emphasis { font-weight: 700; }
+    .tool-descriptor { margin: 18px 0 0; color: #d8cbed; font-size: .86rem; letter-spacing: .02em; }
+    .logo-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 18px 36px; margin-top: 58px; padding-top: 22px; border-top: 1px solid #806aa5; color: #e7e0f1; }
+    .logo-strip-label { width: 100%; color: #d8cbed; font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .platform-logo { color: white; font-size: .9rem; font-weight: 700; letter-spacing: -.02em; }
+    .platform-logo:nth-child(even) { font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; font-weight: 400; }
+    .resume-cta { display: inline-block; margin-top: 28px; padding: 10px 15px; border: 1px solid white; color: white; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .resume-cta:hover, .resume-cta:focus-visible { background: white; color: var(--purple); }
 
-            <article class="project-card">
-              <div class="project-tag">Platform strategy</div>
-              <h3>TikTok</h3>
-              <p>
-                Linked short-form content behavior with purchase intent patterns to inform campaign design and creator strategy.
-              </p>
-              <a href="case-study-tiktok.html">Read the case study →</a>
-            </article>
+    .contact { background: var(--purple); color: white; }
+    .contact .section-label { color: #d8cbed; }
+    .contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 80px; align-items: end; }
+    .contact h2 { max-width: 750px; font-size: clamp(3rem, 6vw, 6.5rem); line-height: .95; }
+    .contact-details { padding-top: 16px; border-top: 1px solid #d8cbed; color: #e7e0f1; font-size: .92rem; }
+    .contact-details p { margin: 0 0 22px; }
+    .contact-link { color: white; font-weight: 700; text-decoration: none; }
+    .contact-link:hover, .contact-link:focus-visible { color: #d8cbed; }
+    .footer { padding: 22px 0; background: var(--purple); border-top: 1px solid #70559b; color: #d8cbed; font-size: .75rem; }
 
-            <article class="project-card">
-              <div class="project-tag">Local growth</div>
-              <h3>Yelp</h3>
-              <p>
-                Reframed local demand and transaction data around customer intent to improve discovery and conversion opportunities.
-              </p>
-              <a href="case-study-yelp.html">Read the case study →</a>
-            </article>
-          </div>
-        </section>
+    @media (max-width: 820px) {
+      .container { width: min(100% - 36px, var(--max)); }
+      .hero, .about-layout, .contact-layout { display: block; }
+      .hero { min-height: auto; padding: 74px 0 80px; }
+      .hero-aside { max-width: 330px; margin-top: 64px; }
+      .section-heading { display: block; }
+      .section-label { margin-bottom: 18px; }
+      .about-note { max-width: 330px; margin-top: 52px; }
+      .project-card { display: grid; grid-template-columns: 1fr; gap: 34px; padding: 56px 0; }
+      .project-card .project-visual, .project-card .project-copy { order: initial; }
+      .project-card .project-visual, .project-card .project-cover { min-height: 360px; }
+      .project-card h3 { grid-column: auto; }
+      .project-link { justify-self: start; }
+      .experience-grid { display: block; }
+      .artifact-grid, .impact-grid, .approach-flow, .tool-grid, .habit-list { grid-template-columns: 1fr; }
+      .tool-row { grid-template-columns: 1fr; gap: 18px; padding: 30px 0 34px; }
+      .capability-grid { grid-template-columns: 1fr; }
+      .contact-details { max-width: 330px; margin-top: 64px; }
+    }
+    @media (max-width: 520px) {
+      .nav { align-items: flex-start; padding: 18px 0; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .67rem; }
+      h1 { font-size: clamp(3.2rem, 17vw, 5.5rem); }
+      section { padding: 76px 0; }
+      .section-heading { margin-bottom: 40px; }
+      .project-card h3 { font-size: 1.7rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="wordmark" href="#top">YUJIAO JIN</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="yujiao-jin-resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="case-studies" class="section container">
-          <div class="section-header">
-            <p class="kicker">Case studies</p>
-            <h2>Detailed project narratives from question to recommendation.</h2>
-          </div>
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Marketing Strategy · Customer Analytics · Growth</p>
+        <h1 id="hero-title">Yujiao <span class="hero-title-accent">(Sky)</span><br>Jin</h1>
+        <p class="hero-description">I turn customer and campaign data into insights, strategies, and execution-ready growth ideas.</p>
+      </div>
+      <div class="hero-aside">
+        <div class="headshot-frame">
+          <img class="headshot" src="headshot.jpg" alt="Professional headshot of Yujiao (Sky) Jin">
+        </div>
+        <p class="location"><span>Northwestern University · M.S. IMC, Data Track</span><span>Chicago, IL</span></p>
+      </div>
+    </section>
 
-          <div class="case-study-rail">
-            <article class="mini-case">
-              <span class="mini-case-label">Featured</span>
-              <h3>Caribou: Customer value recovery strategy</h3>
-              <p>Business question → data and research → insight → recommendation → business impact.</p>
-              <a href="case-study-caribou.html">Open case →</a>
-            </article>
-            <article class="mini-case">
-              <h3>Alo: Demand and segmentation opportunity</h3>
-              <p>From category signals to channel strategy and campaign design.</p>
-              <a href="case-study-alo.html">Open case →</a>
-            </article>
-            <article class="mini-case">
-              <h3>TikTok: Content to conversion narrative</h3>
-              <p>Testing how creative motion and audience signal influence intent.</p>
-              <a href="case-study-tiktok.html">Open case →</a>
-            </article>
-            <article class="mini-case">
-              <h3>Yelp: Local demand understanding</h3>
-              <p>Using local intent data to sharpen customer clustering and offer strategy.</p>
-              <a href="case-study-yelp.html">Open case →</a>
-            </article>
-          </div>
-        </section>
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">01 / About</p>
+          <h2 id="about-title">Where rigorous analysis becomes useful action.</h2>
+        </div>
+        <div class="about-layout">
+          <p class="about-copy">I am pursuing an M.S. in Integrated Marketing Communications (Data Track) at Northwestern University, building on experience across customer analytics, CRM and loyalty, e-commerce, consulting, financial analysis, and growth strategy. I use SQL, statistical modeling, machine learning, and experimentation to bridge data and business growth. My strength is translating complex questions into clear commercial strategies: finding the signal in customer behavior, presenting insights to senior leaders, and turning the answer into an execution-ready campaign or decision. I am especially drawn to work where analytical rigor and human understanding need to move together.</p>
+          <aside class="about-note"><strong>A people-first data practice.</strong>Curious about why customers behave the way they do, and focused on making the next decision clearer, more precise, and more useful.</aside>
+        </div>
+      </div>
+    </section>
 
-        <section class="section container artifact-section">
-          <div class="section-header">
-            <p class="kicker">Artifacts</p>
-            <h2>Actual work, not just project summaries.</h2>
-          </div>
+    <section id="impact" class="impact-strip" aria-label="Impact statistics">
+      <div class="container impact-grid">
+        <div class="impact-item"><strong>2M+</strong><span>loyalty members analyzed</span></div>
+        <div class="impact-item"><strong>+25%</strong><span>incremental monthly visits</span></div>
+        <div class="impact-item"><strong>+10%</strong><span>conversion lift</span></div>
+        <div class="impact-item"><strong>C-suite</strong><span>presentation experience</span></div>
+      </div>
+    </section>
 
-          <div class="artifact-grid">
-            <div class="artifact-card">
-              <span>Dashboard</span>
-              <div class="mock-visual dashboard-mock"></div>
-            </div>
-            <div class="artifact-card">
-              <span>Customer segmentation</span>
-              <div class="mock-visual cluster-mock"></div>
-            </div>
-            <div class="artifact-card">
-              <span>Perceptual map</span>
-              <div class="mock-visual map-mock"></div>
-            </div>
-            <div class="artifact-card">
-              <span>Campaign concept</span>
-              <div class="mock-visual campaign-mock"></div>
-            </div>
-            <div class="artifact-card">
-              <span>Model output</span>
-              <div class="mock-visual model-mock"></div>
-            </div>
-            <div class="artifact-card">
-              <span>Research framework</span>
-              <div class="mock-visual framework-mock"></div>
-            </div>
-          </div>
-        </section>
+    <section id="capabilities" class="capabilities" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">03 / Capabilities</p>
+          <h2 id="capabilities-title">From customer signal to measurable growth.</h2>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card"><span class="capability-index">01 / UNDERSTAND</span><h3>Customer &amp; Consumer Insight</h3><p>Understand people.</p><ul><li>Customer Segmentation</li><li>Consumer Research</li><li>Behavioral Analysis</li><li>Customer Journey &amp; Brand Perception</li></ul></article>
+          <article class="capability-card"><span class="capability-index">02 / MEASURE</span><h3>Marketing Analytics &amp; Experimentation</h3><p>Measure what works.</p><ul><li>Experimentation &amp; A/B Testing</li><li>Statistical Modeling</li><li>Causal Inference</li><li>Machine Learning &amp; Measurement</li></ul></article>
+          <article class="capability-card"><span class="capability-index">03 / ACT</span><h3>Growth &amp; Campaign Strategy</h3><p>Turn insight into action.</p><ul><li>CRM &amp; Lifecycle Strategy</li><li>Audience Targeting</li><li>Campaign Strategy</li><li>Growth &amp; Optimization</li></ul></article>
+        </div>
+      </div>
+    </section>
 
-        <section id="how-i-think" class="section container process-section">
-          <div class="section-header">
-            <p class="kicker">How I think</p>
-            <h2>Framework for turning noisy customer data into action.</h2>
-          </div>
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">04 / Selected Work</p>
+          <h2 id="work-title">Selected Work</h2>
+          <p class="work-intro">A selection of work across customer analytics, consumer insight, and growth strategy.</p>
+        </div>
+        <div class="project-list">
+          <article class="project-card">
+            <a class="project-visual" href="Caribou%20Loyalty%20Growth%20Strategy.pdf" target="_blank" rel="noopener" aria-label="Open Caribou Coffee work sample"><img class="project-cover" src="covers/Caribou%20Loyalty%20Growth%20Strategy.pdf.png" alt="First page of the Caribou Coffee Loyalty Growth Strategy work sample"></a>
+            <div class="project-copy"><span class="project-number">01 / 04</span><h3>Caribou Coffee</h3><p class="project-type">Loyalty Growth Strategy</p><p class="project-question">How can Casual Loyalists visit two more times each year?</p><div class="project-details"><p class="project-detail"><strong>Approach</strong>Descriptive analysis, PSM and DID across a 2M+ member loyalty database, supported by survey and secondary research.</p><p class="project-detail"><strong>Key insight</strong>App and order-ahead behavior revealed specific moments where habitual visits could become more frequent.</p><p class="project-detail"><strong>Strategic implication</strong>Three strategic themes became six targeted campaign action plans for loyalty and digital growth.</p></div><a class="project-link" href="Caribou%20Loyalty%20Growth%20Strategy.pdf" target="_blank" rel="noopener">View Case Study</a></div>
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="Alo%20Brand%20Audit.pdf" target="_blank" rel="noopener" aria-label="Open Alo Yoga work sample"><img class="project-cover" src="covers/Alo%20Brand%20Audit.pdf.png" alt="First page of the Alo Yoga Brand Audit work sample"></a>
+            <div class="project-copy"><span class="project-number">02 / 04</span><h3>Alo Yoga</h3><p class="project-type">Brand Strategy &amp; Consumer Research</p><p class="project-question">Where does the brand promise meet the consumer reality?</p><div class="project-details"><p class="project-detail"><strong>Approach</strong>Primary consumer research, audience segmentation and competitive analysis mapped intended positioning against lived perception.</p><p class="project-detail"><strong>Key insight</strong>The brand held strong cultural equity, but meaningful gaps remained between aspiration, differentiation and audience fit.</p><p class="project-detail"><strong>Strategic implication</strong>Sharper positioning and influencer strategy could turn brand heat into a clearer long-term growth system.</p></div><a class="project-link" href="Alo%20Brand%20Audit.pdf" target="_blank" rel="noopener">View Case Study</a></div>
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="TikTok%20Engagement%20%26%20Reach%20Prediction.pdf.pdf" target="_blank" rel="noopener" aria-label="Open TikTok work sample"><img class="project-cover" src="covers/TikTok%20Engagement%20%26%20Reach%20Prediction.pdf.pdf.png" alt="First page of the TikTok Engagement and Reach Prediction work sample"></a>
+            <div class="project-copy"><span class="project-number">03 / 04</span><h3>TikTok</h3><p class="project-type">Machine Learning &amp; Reach Prediction</p><p class="project-question">Which creator and content signals predict reach?</p><div class="project-details"><p class="project-detail"><strong>Approach</strong>OLS, Ridge/Lasso and Random Forest models tested content and creator-level drivers across 12K+ videos.</p><p class="project-detail"><strong>Key insight</strong>Reach was not explained by a single engagement metric; a combination of creator context and content signals mattered.</p><p class="project-detail"><strong>Strategic implication</strong>Prediction can help teams prioritize creative inputs before publishing, not only report performance after the fact.</p></div><a class="project-link" href="TikTok%20Engagement%20%26%20Reach%20Prediction.pdf.pdf" target="_blank" rel="noopener">View Case Study</a></div>
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="Yelp%20Analysis.pdf" target="_blank" rel="noopener" aria-label="Open Yelp work sample"><img class="project-cover" src="covers/Yelp%20Analysis.pdf.png" alt="First page of the Yelp Restaurant Performance Analysis work sample"></a>
+            <div class="project-copy"><span class="project-number">04 / 04</span><h3>Yelp</h3><p class="project-type">Restaurant Performance Analytics</p><p class="project-question">What makes a restaurant visible, credible and built to last?</p><div class="project-details"><p class="project-detail"><strong>Approach</strong>Linear and logistic regression, odds-ratio interpretation, likelihood-ratio tests and model selection.</p><p class="project-detail"><strong>Key insight</strong>User credibility, pricing, location and review volume work together as practical signals of ratings and survival.</p><p class="project-detail"><strong>Strategic implication</strong>Restaurant operators can focus on the levers that shape both discoverability and durable customer trust.</p></div><a class="project-link" href="Yelp%20Analysis.pdf" target="_blank" rel="noopener">View Case Study</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <div class="process-flow" aria-label="Analytical process">
-            <div class="process-step">
-              <span>01</span>
-              <strong>Frame the question</strong>
-            </div>
-            <div class="process-step">
-              <span>02</span>
-              <strong>Find the signal</strong>
-            </div>
-            <div class="process-step">
-              <span>03</span>
-              <strong>Test the assumption</strong>
-            </div>
-            <div class="process-step">
-              <span>04</span>
-              <strong>Translate to action</strong>
-            </div>
-          </div>
-        </section>
+    <section id="artifacts" class="artifacts" aria-labelledby="artifacts-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">05 / Artifacts</p>
+          <h2 id="artifacts-title">Actual work, not just project summaries.</h2>
+        </div>
+        <div class="artifact-grid">
+          <div class="artifact-card"><span>Dashboard</span><div class="artifact-visual"></div></div>
+          <div class="artifact-card"><span>Segmentation</span><div class="artifact-visual"></div></div>
+          <div class="artifact-card"><span>Perceptual map</span><div class="artifact-visual"></div></div>
+          <div class="artifact-card"><span>Campaign concept</span><div class="artifact-visual"></div></div>
+        </div>
+      </div>
+    </section>
 
-        <section id="toolkit" class="section container">
-          <div class="section-header">
-            <p class="kicker">Toolkit</p>
-            <h2>Analysis, experimentation, and storytelling tools.</h2>
-          </div>
-          <div class="tool-grid" aria-label="Tools used">
-            <span>SQL</span>
-            <span>Python</span>
-            <span>Excel</span>
-            <span>Tableau</span>
-            <span>Power BI</span>
-            <span>R</span>
-            <span>Qualtrics</span>
-            <span>Survey design</span>
-            <span>Customer research</span>
-            <span>Experiment design</span>
-            <span>Storyboarding</span>
-            <span>Executive presentations</span>
-          </div>
-        </section>
+    <section id="approach" class="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">06 / How I Think</p>
+          <h2 id="approach-title">Frame the question → Find the signal → Test the assumption → Translate to action.</h2>
+        </div>
+        <div class="approach-flow">
+          <article class="approach-step"><span class="step-index">01</span><h3>Frame</h3><p>Clarify the business decision and identify the lever that matters.</p></article>
+          <article class="approach-step"><span class="step-index">02</span><h3>Signal</h3><p>Look for the patterns in data that separate noise from actionable insight.</p></article>
+          <article class="approach-step"><span class="step-index">03</span><h3>Test</h3><p>Validate the assumption with the right method and real-world evidence.</p></article>
+          <article class="approach-step"><span class="step-index">04</span><h3>Act</h3><p>Turn findings into targeting, campaigns, and strategic recommendations.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <section id="contact" class="section container contact-section">
-          <p class="kicker">Contact</p>
-          <h2>Interested in customer analytics, growth strategy, and data-driven marketing.</h2>
-          <div class="contact-links">
-            <a href="mailto:hello@beibeijin.com">Email</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-          </div>
-        </section>
-      </main>
+    <section id="toolskills" class="toolkit" aria-labelledby="toolskills-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">07 / Toolkit</p>
+          <h2 id="toolskills-title">The toolkit behind the work.</h2>
+        </div>
+        <p class="toolkit-intro">A practical mix of data, experimentation, research, and activation tools used to turn customer signals into business decisions.</p>
+        <div class="tool-grid">
+          <article class="tool-row"><h3>Data &amp; Modeling</h3><div class="tool-content"><ul><li class="emphasis">SQL</li><li class="emphasis">R</li><li class="emphasis">BigQuery</li><li>Statistical Modeling</li><li>Regression</li><li>Machine Learning</li></ul><p class="tool-descriptor">Customer-level analysis · predictive modeling · large-scale datasets</p></div></article>
+          <article class="tool-row"><h3>Experimentation &amp; Research</h3><div class="tool-content"><ul><li>A/B Testing</li><li>Propensity Score Matching</li><li>Difference-in-Differences</li><li>Qualtrics</li><li>Survey Research</li><li>Segmentation</li></ul><p class="tool-descriptor">Incrementality · causal inference · consumer understanding</p></div></article>
+          <article class="tool-row"><h3>Marketing &amp; Activation</h3><div class="tool-content"><ul><li class="emphasis">Looker</li><li class="emphasis">Tableau</li><li>Excel</li><li>SEMrush</li><li>CRM</li><li>Email Marketing</li></ul><p class="tool-descriptor">Performance monitoring · targeting · campaign optimization</p></div></article>
+        </div>
+        <div class="logo-strip" aria-label="Selected platforms"><span class="logo-strip-label">Selected Platforms</span><span class="platform-logo">BigQuery</span><span class="platform-logo">Looker</span><span class="platform-logo">Tableau</span><span class="platform-logo">Qualtrics</span><span class="platform-logo">SEMrush</span><span class="platform-logo">Excel</span></div>
+      </div>
+    </section>
 
-      <footer class="site-footer container">
-        <p>© <span id="current-year"></span> Beibei Jin</p>
-      </footer>
-    </div>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div><p class="section-label">06 / Contact</p><h2 id="contact-title">Let's turn insight into the next good decision.</h2><a class="resume-cta" href="yujiao-jin-resume.pdf" target="_blank" rel="noopener">View Resume ↓</a></div>
+        <div class="contact-details"><p>Yujiao (Sky) Jin<br>Chicago, IL<br>(+1) 857-654-4434<br>yujiaojin2026@u.northwestern.edu</p><a class="contact-link" href="https://www.linkedin.com/in/yujiao-sky-jin-bab419233" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <template id="resume-data">
+    <section data-resume-content>
+      <h2>Education</h2>
+      <p>Northwestern University — M.S. in Integrated Marketing Communications, Data Track, expected Dec 2026.</p>
+      <p>Northeastern University — B.S. in Business Administration, graduated with honors, May 2025.</p>
+      <h2>Professional Experience</h2>
+      <p>Caribou Coffee, Deloitte, Vega Ventures, Wayfair LLC, and Huayi Brothers Media Corp.</p>
+    </section>
+  </template>
+
+  <footer class="footer"><div class="container">© 2026 Yujiao (Sky) Jin · Marketing Analytics &amp; Growth</div></footer>
+</body>
 </html>
