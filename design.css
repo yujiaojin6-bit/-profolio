@@ -211,6 +211,9 @@ body .capability-panel .count-up { color: var(--ink) !important; }
 html body section.impact .impact-item .proof-metric .count-up { color: #fff !important; }
 html body section.work .project-metric .count-up,
 html body section.what-i-do .capability-panel .count-up { color: var(--ink) !important; }
+html body .project-metric--comparison > strong { display: flex; align-items: baseline; gap: .28em; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.7rem, 3vw, 2.45rem); font-weight: 500; font-variant-numeric: lining-nums tabular-nums; line-height: 1; white-space: nowrap; }
+html body .project-metric--comparison .comparison-arrow { color: var(--accent-ink); font-family: inherit; font-size: .72em; font-weight: 400; }
+html body .project-metric--comparison > span { min-height: 2.7rem; }
 
 html body .contact h2 { max-width: 100%; font-size: clamp(5rem, 13vw, 11rem); line-height: .82; }
 html body .contact-copy { max-width: 48ch; margin-top: 30px; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.4; }
