@@ -212,6 +212,19 @@ html body section.impact .impact-item .proof-metric .count-up { color: #fff !imp
 html body section.work .project-metric .count-up,
 html body section.what-i-do .capability-panel .count-up { color: var(--ink) !important; }
 
+html body .contact h2 { max-width: 100%; font-size: clamp(5rem, 13vw, 11rem); line-height: .82; }
+html body .contact-copy { max-width: 48ch; margin-top: 30px; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.4; }
+html body .contact-actions { gap: 16px; margin-top: 42px; }
+html body .contact-primary,
+html body .contact-secondary { min-height: 76px; padding: 0 30px; font-size: 1rem; letter-spacing: .14em; }
+
+@media (max-width: 600px) {
+  html body .contact h2 { font-size: clamp(4.5rem, 18vw, 6.5rem); }
+  html body .contact-actions { gap: 12px; margin-top: 32px; }
+  html body .contact-primary,
+  html body .contact-secondary { min-height: 68px; font-size: .92rem; }
+}
+
 /* Site-owner refinements */
 html:root { --accent: #cbb8df; --accent-ink: #27172f; }
 body .hero .eyebrow { color: var(--ink); }
