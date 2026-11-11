@@ -107,24 +107,35 @@
     });
   }
 
-  function initToolkitGroups() {
-    var toggles = Array.from(document.querySelectorAll('.toolkit-toggle'));
-    if (!toggles.length) return;
+  function initToolkitAccordion() {
+    var buttons = Array.from(document.querySelectorAll('.toolkit-toggle'));
+    if (!buttons.length) return;
 
-    function setExpanded(toggle, expanded) {
-      var panel = document.getElementById(toggle.getAttribute('aria-controls'));
-      if (!panel) return;
-      toggle.setAttribute('aria-expanded', String(expanded));
-      panel.hidden = !expanded;
-      var icon = toggle.querySelector('.toolkit-chevron');
-      if (icon) icon.textContent = expanded ? '\u2212' : '+';
+    function activate(button, focusButton) {
+      buttons.forEach(function (item) {
+        var active = item === button;
+        item.setAttribute('aria-expanded', String(active));
+        var panel = document.getElementById(item.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !active;
+        var indicator = item.querySelector('.toolkit-chevron');
+        if (indicator) indicator.textContent = active ? '\u2212' : '+';
+        if (active && focusButton) item.focus();
+      });
     }
 
-    toggles.forEach(function (toggle) {
-      toggle.addEventListener('click', function () {
-        var wasExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggles.forEach(function (item) { setExpanded(item, false); });
-        if (!wasExpanded) setExpanded(toggle, true);
+    buttons.forEach(function (button, index) {
+      button.addEventListener('click', function () {
+        if (button.getAttribute('aria-expanded') !== 'true') activate(button, false);
+      });
+      button.addEventListener('keydown', function (event) {
+        var next = null;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % buttons.length;
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + buttons.length) % buttons.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = buttons.length - 1;
+        if (next === null) return;
+        event.preventDefault();
+        activate(buttons[next], true);
       });
     });
   }
@@ -132,7 +143,7 @@
   function initReveals() {
     var targets = document.querySelectorAll(
       '.section-heading, .impact-item, .capability-tab, .capability-panel:not([hidden]),' +
-      ' .skill-group, .featured-project, .contact > .container > *'
+      ' .toolkit-skill-group, .skill-card, .featured-project, .contact > .container > *'
     );
 
     if (reduced || !('IntersectionObserver' in window)) {
@@ -170,7 +181,7 @@
   updateScrollState();
   initReveals();
   initCapabilityTabs();
-  initToolkitGroups();
+  initToolkitAccordion();
   observeCounters(document.querySelector('.impact'));
   document.querySelectorAll('.featured-project').forEach(observeCounters);
   observeCounters(document.querySelector('.capability-panel:not([hidden])'));

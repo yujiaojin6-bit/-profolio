@@ -1439,7 +1439,7 @@
         #hero-title { font-size: clamp(3.3rem, 18vw, 5rem); }
       }
     </style>
-    <link rel="stylesheet" href="design.css?v=293d583-r3" />
+    <link rel="stylesheet" href="design.css?v=293d583-r4" />
   </head>
 
   <body>
@@ -1647,20 +1647,28 @@
             <p class="section-label">04 / Toolkit</p>
             <h2 id="toolkit-title">Tools, applied to real work.</h2>
           </div>
-          <div class="skills-grid">
-            <article class="skill-group">
-              <button class="toolkit-toggle" type="button" aria-expanded="true" aria-controls="toolkit-panel-creativity" id="toolkit-toggle-creativity"><span class="toolkit-index">01</span><strong>Creativity</strong><span class="toolkit-chevron" aria-hidden="true">−</span></button>
-              <div class="skill-cards" id="toolkit-panel-creativity">
+          <div class="toolkit-groups">
+            <section class="toolkit-skill-group" aria-labelledby="toolkit-creativity-title">
+              <button class="toolkit-toggle" type="button" aria-expanded="true" aria-controls="toolkit-panel-creativity" id="toolkit-toggle-creativity"><span class="toolkit-index">01</span><strong id="toolkit-creativity-title">Creativity</strong><span class="toolkit-chevron" aria-hidden="true">−</span></button>
+              <div class="toolkit-skill-grid" id="toolkit-panel-creativity">
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">✦</span><h4>Event planning · Fashion Pop Night</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">✳</span><h4>Campaign creation</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▧</span><h4>Website building</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▶</span><h4>Video editing</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">◌</span><h4>Email creative testing</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">✧</span><h4>Social media campaigns</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">◇</span><h4>Photoshop</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">◇</span><h4>Canva</h4></article>
               </div>
-            </article>
-            <article class="skill-group">
-              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-data" id="toolkit-toggle-data"><span class="toolkit-index">02</span><strong>Data &amp; Analysis</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
-              <div class="skill-cards" id="toolkit-panel-data" hidden>
+            </section>
+            <section class="toolkit-skill-group" aria-labelledby="toolkit-data-title">
+              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-data" id="toolkit-toggle-data"><span class="toolkit-index">02</span><strong id="toolkit-data-title">Data &amp; Analysis</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
+              <div class="toolkit-skill-grid" id="toolkit-panel-data" hidden>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌘</span><h4>SQL</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌬</span><h4>Python · Pandas · NumPy</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌁</span><h4>R</h4></article>
-                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌬</span><h4>Python</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▤</span><h4>Excel · VBA</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▧</span><h4>Pivot Tables · VLOOKUP</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▦</span><h4>BigQuery</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">◷</span><h4>A/B testing</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">∑</span><h4>PSM</h4></article>
@@ -1673,13 +1681,17 @@
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">◇</span><h4>Decision models</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">⤴</span><h4>Optimization</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▧</span><h4>Excel Solver</h4></article>
-                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌕</span><h4>Qualtrics</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▧</span><h4>Statistical analysis</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌬</span><h4>Claude Code</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌘</span><h4>Visual Studio</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▤</span><h4>Microsoft Office</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▥</span><h4>Dashboarding</h4></article>
               </div>
-            </article>
-            <article class="skill-group">
-              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-strategy" id="toolkit-toggle-strategy"><span class="toolkit-index">03</span><strong>Strategy</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
-              <div class="skill-cards" id="toolkit-panel-strategy" hidden>
+            </section>
+            <section class="toolkit-skill-group" aria-labelledby="toolkit-strategy-title">
+              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-strategy" id="toolkit-toggle-strategy"><span class="toolkit-index">03</span><strong id="toolkit-strategy-title">Strategy</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
+              <div class="toolkit-skill-grid" id="toolkit-panel-strategy" hidden>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌕</span><h4>Qualtrics</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌕</span><h4>Survey research</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">◎</span><h4>Segmentation</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌖</span><h4>Customer journey mapping</h4></article>
@@ -1687,19 +1699,24 @@
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">↻</span><h4>Lifecycle marketing</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">◎</span><h4>Targeting</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">◇</span><h4>Loyalty strategy</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌖</span><h4>Market research · due diligence</h4></article>
               </div>
-            </article>
-            <article class="skill-group">
-              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-activation" id="toolkit-toggle-activation"><span class="toolkit-index">04</span><strong>Activation</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
-              <div class="skill-cards" id="toolkit-panel-activation" hidden>
+            </section>
+            <section class="toolkit-skill-group" aria-labelledby="toolkit-activation-title">
+              <button class="toolkit-toggle" type="button" aria-expanded="false" aria-controls="toolkit-panel-activation" id="toolkit-toggle-activation"><span class="toolkit-index">04</span><strong id="toolkit-activation-title">Activation</strong><span class="toolkit-chevron" aria-hidden="true">+</span></button>
+              <div class="toolkit-skill-grid" id="toolkit-panel-activation" hidden>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▤</span><h4>Tableau</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▦</span><h4>Looker</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▥</span><h4>Power BI</h4></article>
-                <article class="skill-card"><span class="skill-icon" aria-hidden="true">⌑</span><h4>Campaign planning</h4></article>
-                <article class="skill-card"><span class="skill-icon" aria-hidden="true">↗</span><h4>Data storytelling</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">▧</span><h4>SEMrush</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">◈</span><h4>HubSpot</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">✦</span><h4>Campaign planning &amp; briefs</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">↗</span><h4>Email campaigns</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">↗</span><h4>Integrated campaign execution</h4></article>
+                <article class="skill-card"><span class="skill-icon" aria-hidden="true">✦</span><h4>Data storytelling</h4></article>
                 <article class="skill-card"><span class="skill-icon" aria-hidden="true">▤</span><h4>Executive presentations</h4></article>
               </div>
-            </article>
+            </section>
           </div>
           <div class="credential-line">
             <span>Google Data Analytics Professional Certificate</span>
