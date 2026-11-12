@@ -1134,12 +1134,14 @@ section {
 body .hero .eyebrow,
 body #hero-title,
 body .hero-description { font-family: "Manrope", sans-serif; letter-spacing: 0; }
-body .hero.container { width: min(1480px, calc(100% - 96px)); }
+body .hero.container { width: min(1560px, calc(100% - 40px)); }
 body .hero .eyebrow { margin-bottom: 18px; font-size: .72rem; letter-spacing: .12em; }
 body #hero-title { max-width: none; font-size: clamp(3rem, 4.3vw, 4.5rem); font-weight: 700; line-height: 1.08; }
 body #hero-title .hero-line { display: inline; }
 body .hero .hero-title-accent { color: var(--accent-ink); font-weight: 800; }
 body .hero-description { max-width: none; margin-top: 22px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.18rem); line-height: 1.6; }
+body #hero-title,
+body .hero-description { width: calc(100% + 48px); }
 body .hero-actions .primary-link,
 body .hero-actions .secondary-link { min-height: 54px; padding-right: 24px; padding-left: 24px; font-size: .8rem; }
 
@@ -1147,6 +1149,13 @@ body .hero-actions .secondary-link { min-height: 54px; padding-right: 24px; padd
   body .hero.container { width: calc(100% - 36px); }
   body #hero-title { font-size: clamp(2.35rem, 8vw, 3.2rem); }
   body .hero-description { font-size: 1.05rem; }
+  body #hero-title,
+  body .hero-description { width: 100%; }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+  body #hero-title,
+  body .hero-description { width: calc(100% + 24px); }
 }
 
 html body #toolkit .section-heading h2 { font-family: "Manrope", sans-serif; font-weight: 700; letter-spacing: 0; }
