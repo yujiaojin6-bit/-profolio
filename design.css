@@ -1134,14 +1134,48 @@ section {
 body .hero .eyebrow,
 body #hero-title,
 body .hero-description { font-family: "Manrope", sans-serif; letter-spacing: 0; }
+body .hero.container { width: min(1480px, calc(100% - 96px)); }
 body .hero .eyebrow { margin-bottom: 18px; font-size: .72rem; letter-spacing: .12em; }
-body #hero-title { max-width: 760px; font-size: clamp(3rem, 4.3vw, 4.5rem); font-weight: 700; line-height: 1.08; }
-body #hero-title .hero-line { display: block; }
+body #hero-title { max-width: 900px; font-size: clamp(3rem, 4.3vw, 4.5rem); font-weight: 700; line-height: 1.08; }
+body #hero-title .hero-line { display: inline; }
 body .hero .hero-title-accent { color: var(--accent-ink); font-weight: 800; }
-body .hero-description { max-width: 660px; margin-top: 22px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.18rem); line-height: 1.6; }
+body .hero-description { max-width: 860px; margin-top: 22px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.18rem); line-height: 1.6; }
+body .hero-actions .primary-link,
+body .hero-actions .secondary-link { min-height: 54px; padding-right: 24px; padding-left: 24px; font-size: .8rem; }
 
 @media (max-width: 720px) {
+  body .hero.container { width: calc(100% - 36px); }
   body #hero-title { font-size: clamp(2.35rem, 8vw, 3.2rem); }
-  body #hero-title .hero-line { display: inline; }
   body .hero-description { font-size: 1.05rem; }
+}
+
+html body #toolkit .section-heading h2 { font-family: "Manrope", sans-serif; font-weight: 700; letter-spacing: 0; }
+html body #toolkit .toolkit-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px; margin-top: 20px; padding: 0; border: 0; }
+html body #toolkit .toolkit-skill-group { min-width: 0; align-self: start; padding: 0; border: 0; }
+html body #toolkit .toolkit-toggle { display: grid; width: 100%; min-height: 58px; grid-template-columns: auto minmax(0, 1fr) 22px; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--ink); cursor: pointer; font: inherit; text-align: left; transition: background 180ms ease, border-color 180ms ease; }
+html body #toolkit .toolkit-toggle:hover, html body #toolkit .toolkit-toggle:focus-visible { border-color: var(--ink); background: rgba(255, 255, 255, .48); }
+html body #toolkit .toolkit-toggle[aria-expanded="true"] { border-color: var(--accent-ink); background: rgba(39, 30, 43, .035); }
+html body #toolkit .toolkit-index { color: var(--muted); font-family: "Inter", sans-serif; font-size: .65rem; font-weight: 600; }
+html body #toolkit .toolkit-toggle strong { color: inherit; font-family: "Manrope", sans-serif; font-size: .98rem; font-weight: 650; letter-spacing: 0; line-height: 1.25; }
+html body #toolkit .toolkit-chevron { display: grid; width: 22px; height: 22px; place-items: center; border: 0; color: var(--ink); font-family: "Inter", sans-serif; font-size: 1.05rem; font-weight: 400; line-height: 1; }
+html body #toolkit .toolkit-skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-auto-rows: minmax(44px, auto); align-items: start; gap: 8px; margin-top: 10px; }
+html body #toolkit .toolkit-skill-grid[hidden] { display: none !important; }
+html body #toolkit .skill-card { display: flex; min-width: 0; min-height: 44px; height: auto; align-items: center; justify-content: flex-start; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255, 255, 255, .38); text-align: left; transition: border-color 160ms ease, background 160ms ease; }
+html body #toolkit .skill-card:hover { border-color: var(--accent-ink); background: rgba(255, 255, 255, .72); box-shadow: none; transform: none; }
+html body #toolkit .skill-icon { flex: 0 0 16px; width: 16px; height: 16px; color: var(--accent-ink); font-size: .72rem; line-height: 1; }
+html body #toolkit .skill-card h4 { min-width: 0; margin: 0; color: var(--ink); font-family: "Inter", sans-serif; font-size: .72rem; font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
+html body #toolkit .toolkit-skill-grid:not([hidden]) { animation: toolkit-panel-enter 180ms ease-out both; }
+
+@keyframes toolkit-panel-enter {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  html body #toolkit .toolkit-groups { grid-template-columns: 1fr; gap: 12px; }
+  html body #toolkit .toolkit-skill-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body #toolkit .toolkit-skill-grid:not([hidden]) { animation: none; }
 }

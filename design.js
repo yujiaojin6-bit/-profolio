@@ -111,26 +111,23 @@
     var buttons = Array.from(document.querySelectorAll('.toolkit-toggle'));
     if (!buttons.length) return;
 
-    function activate(button, focusButton) {
-      buttons.forEach(function (item) {
-        var active = button !== null && item === button;
-        item.setAttribute('aria-expanded', String(active));
-        var panel = document.getElementById(item.getAttribute('aria-controls'));
-        if (panel) panel.hidden = !active;
-        if (panel && active) {
-          panel.querySelectorAll('.skill-card').forEach(function (card) {
-            card.classList.add('is-visible');
-          });
-        }
-        var indicator = item.querySelector('.toolkit-chevron');
-        if (indicator) indicator.textContent = active ? '\u2212' : '+';
-        if (active && focusButton) item.focus();
-      });
+    function setExpanded(button, expanded) {
+      button.setAttribute('aria-expanded', String(expanded));
+      var panel = document.getElementById(button.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !expanded;
+      if (panel && expanded) {
+        panel.querySelectorAll('.skill-card').forEach(function (card) {
+          card.classList.add('is-visible');
+        });
+      }
+      var indicator = button.querySelector('.toolkit-chevron');
+      if (indicator) indicator.textContent = expanded ? '\u2212' : '+';
     }
 
     buttons.forEach(function (button, index) {
+      setExpanded(button, button.getAttribute('aria-expanded') === 'true');
       button.addEventListener('click', function () {
-        activate(button.getAttribute('aria-expanded') === 'true' ? null : button, false);
+        setExpanded(button, button.getAttribute('aria-expanded') !== 'true');
       });
       button.addEventListener('keydown', function (event) {
         var next = null;
@@ -140,7 +137,7 @@
         if (event.key === 'End') next = buttons.length - 1;
         if (next === null) return;
         event.preventDefault();
-        activate(buttons[next], true);
+        buttons[next].focus();
       });
     });
   }
