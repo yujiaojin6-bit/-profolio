@@ -117,6 +117,11 @@
         item.setAttribute('aria-expanded', String(active));
         var panel = document.getElementById(item.getAttribute('aria-controls'));
         if (panel) panel.hidden = !active;
+        if (panel && active) {
+          panel.querySelectorAll('.skill-card').forEach(function (card) {
+            card.classList.add('is-visible');
+          });
+        }
         var indicator = item.querySelector('.toolkit-chevron');
         if (indicator) indicator.textContent = active ? '\u2212' : '+';
         if (active && focusButton) item.focus();
