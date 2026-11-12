@@ -145,8 +145,8 @@ body.scrolled .site-header { box-shadow: 0 6px 24px rgba(25, 20, 30, 0.08); }
 }
 
 /* Compact, always-visible Toolkit grid */
-html body #toolkit .toolkit-groups { display: grid; grid-template-columns: 1fr; gap: 16px; }
-html body #toolkit .toolkit-skill-group { min-width: 0; padding-top: 12px; border-top: 1px solid var(--line); }
+html body #toolkit .toolkit-groups { display: grid; grid-template-columns: 1fr; gap: 8px; }
+html body #toolkit .toolkit-skill-group { min-width: 0; padding-top: 8px; border-top: 1px solid var(--line); }
 html body #toolkit .toolkit-skill-group > h3 { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.16rem; font-weight: 400; }
 html body #toolkit .toolkit-skill-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: 96px; gap: 8px; }
 html body #toolkit .toolkit-skill-grid[hidden] { display: none !important; }
