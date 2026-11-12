@@ -113,7 +113,7 @@
 
     function activate(button, focusButton) {
       buttons.forEach(function (item) {
-        var active = item === button;
+        var active = button !== null && item === button;
         item.setAttribute('aria-expanded', String(active));
         var panel = document.getElementById(item.getAttribute('aria-controls'));
         if (panel) panel.hidden = !active;
@@ -125,7 +125,7 @@
 
     buttons.forEach(function (button, index) {
       button.addEventListener('click', function () {
-        if (button.getAttribute('aria-expanded') !== 'true') activate(button, false);
+        activate(button.getAttribute('aria-expanded') === 'true' ? null : button, false);
       });
       button.addEventListener('keydown', function (event) {
         var next = null;
